@@ -1,0 +1,6 @@
+@JAULABACKEND_HostAddress = http://localhost:5192
+
+GET {{JAULABACKEND_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

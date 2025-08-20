@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Jugadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestión de Jugadores</h1>
+
+    <div class="container">
+        <div class="form-section">
+            <h2>Crear/Editar Jugador</h2>
+            <form id="jugadorForm">
+                <input type="hidden" id="jugadorId">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="apellidoPaterno">Apellido Paterno:</label>
+                <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
+                <label for="apellidoMaterno">Apellido Materno:</label>
+                <input type="text" id="apellidoMaterno" name="apellidoMaterno" required>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+                <label for="estatura">Estatura:</label>
+                <input type="number" step="0.01" id="estatura" name="estatura" required>
+                <label for="peso">Peso:</label>
+                <input type="number" step="0.01" id="peso" name="peso" required>
+                <label for="habilidad">Habilidad:</label>
+                <input type="text" id="habilidad" name="habilidad" required>
+                <button type="submit" id="submitButton">Crear Jugador</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>Buscar Jugador por ID</h2>
+            <form id="getJugadorForm">
+                <label for="jugadorIdGet">ID del Jugador:</label>
+                <input type="number" id="jugadorIdGet" name="jugadorId" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>Eliminar Jugador</h2>
+            <form id="deleteJugadorForm">
+                <label for="jugadorIdDelete">ID del Jugador:</label>
+                <input type="number" id="jugadorIdDelete" name="jugadorId" required>
+                <button type="submit">Eliminar</button>
+            </form>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <h2>Lista de Jugadores</h2>
+    <div id="jugadoresList"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
